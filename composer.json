@@ -1,11 +1,10 @@
 {
-	"autoload" : {
-		"psr-4" : {
-			"Challenge\\" : "src",
-			"Tests\\" : "tests"
+	"autoload": {
+		"psr-4": {
+			"Challenge\\" : "src","Tests\\":"tests"
 		}
 	},
-    "require": {
-        "phpunit/phpunit": "^6.2"
-    }
+	"require": {
+		"phpunit/phpunit": "^6.2"
+	}
 }
