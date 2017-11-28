@@ -1,6 +1,5 @@
 <?php 
 namespace Challenge;
- 
 require '../vendor/autoload.php';
 
 class PrintNumbers extends Numbers{
@@ -17,30 +16,21 @@ class PrintNumbers extends Numbers{
 			for($i=1; $i<=$qtd->numbers; $i++) {
 				$numberList = $i;
 				
-				$linio = $i % 3; /* Multiples of 3 */
-				while ( ! $linio ) {
-					$numberList = 'Linio';
-					break;
-				}
+				$multiplesOfThreeObj = new MultiplesOfThree();
+				$numberList= $multiplesOfThreeObj->multiplesOfThree($i, $numberList);
 				
-				$it = $i % 5; /* Multiples of 5 */
-				while ( ! $it ) {
-					$numberList = 'IT';
-					break;
-				}
+				$multiplesOfFiveObj = new MultiplesOfFive();
+				$numberList= $multiplesOfFiveObj->multiplesOfFive($i, $numberList);
 				
-				if (! $linio && ! $it) { /* Multiples of 5 and 3 (unique if) */
-					
-					$numberList = 'Linianos';
-				}
+				$multiplesOfThreeAndFiveObj = new MultiplesOfThreeAndFive();
+				$numberList= $multiplesOfThreeAndFiveObj->multiplesOfThreeAndFive($i, $numberList);
 				
 				$result [$i] = $numberList;
 			}
 		}
-
 		return implode(", ",$result);
 	}
-
+    
 	public function output() {
 		return implode('', array("",$this->multiples(),""));
 	}
