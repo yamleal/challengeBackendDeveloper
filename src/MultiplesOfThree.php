@@ -16,4 +16,3 @@ class MultiplesOfThree{
         return $numberList;
     }   
 }
-?>

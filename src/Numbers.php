@@ -8,5 +8,3 @@ class Numbers {
 		$this->numbers = $numbers;
 	}
 }
-
-?>

@@ -7,7 +7,4 @@ $input = array(
 );
 
 $results = new PrintNumbers($input);
-
 echo $results->output();
-
-?>

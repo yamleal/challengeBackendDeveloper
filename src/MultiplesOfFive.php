@@ -16,4 +16,3 @@ class MultiplesOfFive{
         return $numberList;
     }
 }
-?>

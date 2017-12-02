@@ -35,4 +35,3 @@ class PrintNumbers extends Numbers{
 		return implode('', array("",$this->multiples(),""));
 	}
 }
-?>
